@@ -1,0 +1,16 @@
+var randomnumber1=Math.random();
+randomnumber1*=6;
+randomnumber1=Math.floor(randomnumber1);
+randomnumber1+=1;
+var dicenumber="images/dice"+randomnumber1+".png";
+document.querySelectorAll("img")[0].setAttribute("src",dicenumber);
+var randomnumber2=Math.random();
+randomnumber2=Math.floor(randomnumber2*6)+1;
+var dicenumber1="images/dice"+randomnumber2+".png";
+document.querySelectorAll("img")[1].setAttribute("src",dicenumber1);
+document.querySelectorAll("img")[1].setAttribute("alt",randomnumber2);
+var winner;
+if(randomnumber2>randomnumber1)winner="player 2 wins🎉";
+else if(randomnumber2<randomnumber1)winner="player 1 wins🎉";
+else winner="tie🎏";
+document.querySelector("h1").textContent=winner;
